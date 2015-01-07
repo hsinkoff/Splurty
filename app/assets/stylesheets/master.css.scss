@@ -19,12 +19,12 @@
     margin: 10px 10px;
     text-align: center;
     color: #FFF;
-    font-size: 10px;
-    line-height: 16px;
+    font-size: 12px;
+    line-height: 18px;
     cursor: pointer;
-    transform:rotate(11deg);
-    -ms-transform:rotate(11deg); /* IE 9 */
-    -webkit-transform:rotate(11deg); /* Opera, Chrome, and Safari */
+    transform:rotate(0deg);
+    -ms-transform:rotate(0deg); /* IE 9 */
+    -webkit-transform:rotate(0deg); /* Opera, Chrome, and Safari */
 }
 
 .slogan {
@@ -36,6 +36,7 @@
 
 .links {
 	padding-top:26px;
+    
 }
 
 .links a {
@@ -73,4 +74,8 @@ h2 {
     font-style: italic;
     text-align: right;
     font-size:10px;
+}
+
+.logo:hover {
+    text-decoration:none;
 }
