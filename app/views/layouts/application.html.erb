@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 	<header>
@@ -43,8 +44,8 @@
       
      <%= simple_form_for Quote.new do |f| %>
        <div class="modal-body">
-	     <%= f.input :saying, :label => "What would you suggest doing today?", :placeholder => "Sit on a wall" %>
-	     <%= f.input :author, :label => "What is your name?", :placeholder => "Humpty-Dumpty" %>
+	     <%= f.input :saying, :label => "What would you suggest doing today?", :placeholder => "Eat Dessert First" %>
+	     <%= f.input :author, :label => "What is your name?", :placeholder => "Jacques Torres" %>
 	     <br />
        </div>
       <div class="modal-footer">
@@ -56,8 +57,7 @@
   </div>
 </div>
 
-    <hr />
-	<br class="clear" />
+    <hr>
 
 <div class="container">
 	<% if flash[:error].present? %>
@@ -71,7 +71,7 @@
 <div class="footer">
 	<div class="container">
 		<div class="col-xs-12 col-sm-6">
-			<%= link_to "I'd like to see another suggestion.", root_path, :class => 'next-quote' %>
+			<u><%= link_to "I'd like to see another suggestion.", root_path, :class => 'next-quote' %></u>
 		</div>
 		<div class="col-xs-12 col-sm-6 footer-blurb">
             Built by Hilary

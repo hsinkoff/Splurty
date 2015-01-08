@@ -12,7 +12,7 @@
     font-style: italic;
     position: relative;
     border-radius: 100%;
-    background: #f84342;
+    background: #3333FF;
     border: 1px solid #F7F7F7;
     width: 80px;
     height: 80px;
@@ -31,16 +31,18 @@
 	font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 	font-style: italic;
 	padding-top: 26px;
-    font-size: 25px
+    font-size: 25px;
+    text-align: center;
 }
 
 .links {
 	padding-top:26px;
+    text-align: right;
 }
 
 .links a {
 	color:black;
-	font-size: 20px;
+	font-size: 16px;
 	border-bottom: 1px solid #dfdfdf;
     font-family: 'Roboto', sans-serif;
 }
@@ -50,12 +52,14 @@ header {
 }
 
 hr {
-	clear:both;
+    color: #3333FF;
+    clear: both;
 }
 
 h1 {
-    font-family: 'Indie Flower', cursive;
-    
+    font-family: 'Indie Flower', cursive; 
+    text-align: center; 
+    font-size: 50px;
 }
 
 h2 {
@@ -63,12 +67,12 @@ h2 {
 }
 
 h2 span {
-    color: #dddddd;
+    color: #CCCCCC;
     font-family: 'Indie Flower', cursive;
 }
 
 .next-quote {
-    color: #f84342;
+    color: #3333FF;
      font-family: 'Roboto', sans-serif;
      font-size: 20px;
 }
@@ -77,7 +81,7 @@ h2 span {
     font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
     font-style: italic;
     text-align: right;
-    font-size:10px;
+    font-size:12px;
 }
 
 .logo:hover {
@@ -91,7 +95,7 @@ h2 span {
 
 @media (max-width: 750px) {
     .footer-blurb {
-    text-aligh: left;
+    text-align: left;
     }
 }
 
@@ -101,5 +105,5 @@ h2 span {
 }
 
 ::selection {
-    background-color: #f84342
+    background-color: #3333FF
 }
