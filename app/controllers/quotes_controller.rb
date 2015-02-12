@@ -12,20 +12,20 @@ class QuotesController < ApplicationController
 	end
 
 
-def about
-end
-
-def show
-	@quote = Quote.where(:id => params[:id]).first
-	if @quote.blank?
-		render :text => "Not Found", :status => :not_found
+	def about
 	end
-end
 
-private
+	def show
+		@quote = Quote.where(:id => params[:id]).first
+		if @quote.blank?
+			render :text => "Not Found", :status => :not_found
+		end
+	end
 
-def quote_params
-	params.require(:quote).permit(:saying, :author)
-end
+	private
+
+	def quote_params
+		params.require(:quote).permit(:saying, :author)
+	end
 
 end

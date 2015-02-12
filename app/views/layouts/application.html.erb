@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
+ <head>
   <title>Splurty</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
+ </head>
+ <body>
 	<header>
 		<div class="col-xs-3">
 			<%= link_to root_path , :class => 'logo' do %>
-			<div class="circle">
-				<br />
-				Today's
-				<br />
-				Suggestion
+				<div class="circle">
+					<br />
+					Today's
+					<br />
+					Suggestion
 				
-			</div>
+				</div>
 			<% end %>
 		</div>
 		<div class="col-sm-4 hidden-xs slogan">
@@ -27,60 +27,60 @@
 		  <div class="col-xs-8 col-xs-offset-1 col-sm-offset-0 col-sm-5 links">
 		  
 			<!-- Button trigger modal -->
-          <%= link_to 'Contribute', '#', :data => {:toggle => 'modal', :target => '#myModal'} %>
-        &nbsp;&nbsp;
-		  <%= link_to 'About', about_path %>
+          	<%= link_to 'Contribute', '#', :data => {:toggle => 'modal', :target => '#myModal'} %>
+          	&nbsp;&nbsp;
+		  	<%= link_to 'About', about_path %>
 		  </div>
 	    </div>
 	</header>
 
 	
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Contribute Your Suggestion</h4>
-      </div>
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-dialog">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        			<h4 class="modal-title" id="myModalLabel">Contribute Your Suggestion</h4>
+      			</div>
       
-     <%= simple_form_for Quote.new do |f| %>
-       <div class="modal-body">
-	     <%= f.input :saying, :label => "What would you suggest doing today?", :placeholder => "Eat Dessert First" %>
-	     <%= f.input :author, :label => "What is your name?", :placeholder => "Jacques Torres" %>
-	     <br />
-       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <%= f.submit 'Create', :class => 'btn btn-danger' %>
-      </div>
-      <% end %>
-    </div>
-  </div>
-</div>
+     			<%= simple_form_for Quote.new do |f| %>
+       				<div class="modal-body">
+	     				<%= f.input :saying, :label => "What would you suggest doing today?", :placeholder => "Eat Dessert First" %>
+		     			<%= f.input :author, :label => "What is your name?", :placeholder => "Jacques Torres" %>
+	    	 			<br />
+       				</div>
+      				<div class="modal-footer">
+        				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        				<%= f.submit 'Create', :class => 'btn btn-danger' %>
+      				</div>
+      			<% end %>
+    		</div>
+  		</div>
+	</div>
 
     <hr>
 
-<div class="container">
-	<% if flash[:error].present? %>
-	<div class="col-xs-10 col-xs-offset-1 alert alert-danger">
-		<%= flash[:error].html_safe %>
-	</div>
-	<%end%>
-<%= yield %>
-</div>
-
-<div class="footer">
 	<div class="container">
-		<div class="col-xs-12 col-sm-6">
-			<u><%= link_to "I'd like to see another suggestion.", root_path, :class => 'next-quote' %></u>
-		</div>
-		<div class="col-xs-12 col-sm-6 footer-blurb">
-            Built by Hilary
-        </div>
+		<% if flash[:error].present? %>
+			<div class="col-xs-10 col-xs-offset-1 alert alert-danger">
+				<%= flash[:error].html_safe %>
+			</div>
+		<%end%>
+		<%= yield %>
 	</div>
-</div>
 
-</body>
+	<div class="footer">
+		<div class="container">
+			<div class="col-xs-12 col-sm-6">
+				<u><%= link_to "I'd like to see another suggestion.", root_path, :class => 'next-quote' %></u>
+			</div>
+			<div class="col-xs-12 col-sm-6 footer-blurb">
+            	Built by Hilary
+        	</div>
+		</div>
+	</div>
+
+ </body>
 </html>
